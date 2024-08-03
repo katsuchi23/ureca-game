@@ -1,0 +1,234 @@
+.background1{
+    background-image: url(../assets/bg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background2{
+    background-image: url(../assets/bg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background3{
+    background-image: url(../assets/bg3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstrow{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 5%;
+    position: absolute;
+}
+
+.score{
+    font-size: min(12vw, 7rem);
+    font-family: monospace;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    transition: all 200ms ease-out;
+}
+
+.score:hover{
+    cursor: pointer;
+    color: rgb(0, 221, 255);
+}
+
+.secondrow{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    position: relative;
+    height: 25%;
+}
+
+.thirdrow{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    position: absolute;
+    bottom: 10%;
+}
+
+.button{    
+    font-family: monospace;
+    font-size: 4\rem;
+    width: 20%;
+    max-width: 600px;
+    min-width: 250px;
+    bottom: 35%;
+    margin: 0;
+    text-align: center;
+    border-radius: 50px;
+    border-color: rgba(255, 0, 0, 0);
+    background-color: rgba(255, 0, 0, 0.603);
+    transition: all 200ms ease-out;
+    color: white;
+}
+
+.button:hover{
+    background-color: rgba(255, 255, 255, 0.731);
+    color: rgba(255, 0, 0, 0.603);
+}
+
+.image{
+    height: 100%;
+    aspect-ratio: 1/1;
+    transition: all 200ms ease-out;
+}
+
+.image:hover{
+    cursor: pointer;
+    filter: brightness(150%);
+}
+
+.fraction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    gap: 5%;
+}
+
+hr {
+    height: 3%;
+    width: 60%;
+    margin: 0;
+    align-self: center;
+    background-color: white;
+}
+
+.input{
+    width: 30%;
+    max-width: 500px;
+    aspect-ratio: 1/1;
+    align-self: center;
+    background-color: rgba(255, 0, 0, 0.603);
+    transition: all 200ms ease-out;
+    color: white;
+    border-color: rgba(240, 248, 255, 0);
+    font-family: monospace;
+    text-align: center;
+    font-size: 4.3rem;
+
+}
+
+.input:hover{
+    background-color: rgba(255, 255, 255, 0.731);
+    color: rgba(255, 0, 0, 0.603);
+
+}
+
+.input::placeholder{
+    color: white;
+    font-family: monospace;
+    text-align: center;
+}
+
+.input1{
+    width: 10%;
+    max-width: 500px;
+    aspect-ratio: 1/1;
+    align-self: center;
+    background-color: rgba(255, 0, 0, 0.603);
+    transition: all 200ms ease-out;
+    color: white;
+    border-color: rgba(240, 248, 255, 0);
+    font-family: monospace;
+    text-align: center;
+    font-size: 4.3rem;
+
+}
+
+.input1:hover{
+    background-color: rgba(255, 255, 255, 0.731);
+    color: rgba(255, 0, 0, 0.603);
+
+}
+
+.input1::placeholder{
+    color: white;
+    font-family: monospace;
+    text-align: center;
+}
+
+p{
+    font-size: min(15vw, 9rem);
+    font-family: monospace;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    align-self: center;
+    color: white;
+}
+
+.gamewin{
+    position:absolute;
+    aspect-ratio: 1/1;
+    height: 80%;
+    background-color: rgba(255, 0, 0, 0);
+    background-image: url(../assets/gamewin.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: None;
+    align-items: center;
+    flex-direction: column;
+}
+
+.secondbutton{
+    display: flex;
+    position: absolute;
+    bottom: 30%;
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+.time{
+    font-size: min(12vw, 7rem);
+    font-family: monospace;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    margin: 0;
+    position: relative;
+    bottom: 15%;
+    text-align: center;
+    transition: all 200ms ease-out;
+}
+
+.time:hover{
+    cursor: pointer;
+    color: rgb(0, 221, 255);
+}

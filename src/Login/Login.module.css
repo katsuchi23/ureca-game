@@ -1,0 +1,66 @@
+.background{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    font-size: min(15vw, 7rem);
+    font-family: monospace;
+    font-weight: bold;
+    color: red;
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    text-align: center;
+}
+
+.input{
+    position: absolute;
+    font-size: 3rem;
+    font-family: monospace;
+    color: white;
+    width: 50%;
+    max-width: 1300px;
+    min-width: 500px;
+    height: 7%;
+    margin: 0;
+    align-self: center;
+    text-align: center;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.485);
+    border-color: rgba(255, 0, 0, 0);
+    transition: all 200ms ease-out;
+}
+
+.input:hover{
+    background-color: rgba(255, 0, 0, 0.669);
+}
+
+.button{    
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: monospace;
+    font-size: 4rem;
+    width: 20%;
+    max-width: 600px;
+    min-width: 250px;
+    bottom: 35%;
+    height: 7%;
+    margin: 0;
+    text-align: center;
+    border-radius: 50px;
+    border-color: rgba(255, 0, 0, 0);
+    background-color: rgba(255, 0, 0, 0.603);
+    transition: all 200ms ease-out;
+}
+
+.button:hover{
+    background-color: rgba(255, 255, 255, 0.731);
+    color: rgba(255, 0, 0, 0.603);
+}
+

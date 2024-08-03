@@ -1,0 +1,20 @@
+.background1{
+    background-image: url(./assets/bg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.background2{
+    background-image: url(./assets/bg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.background3{
+    background-image: url(./assets/bg3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

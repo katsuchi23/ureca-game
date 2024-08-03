@@ -1,0 +1,29 @@
+.buttonon{
+    background-image: url(./assets/volumeon1.png);
+    background-color: rgba(240, 248, 255, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 5%;
+    aspect-ratio: 1/1;
+    border-color : transparent;
+    margin: 0;
+    position: absolute;
+    top: 0;
+}
+
+.buttonoff{
+    background-image: url(./assets/volumeoff.png);
+    background-color: rgba(240, 248, 255, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 7%;
+    aspect-ratio: 1/1;
+    border-color : transparent;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    transform: translate(-10%, -15%);
+    padding: 0;
+}
