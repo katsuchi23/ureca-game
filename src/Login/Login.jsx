@@ -10,7 +10,7 @@ function Login(){
         const input = document.getElementById("input").value.toString();
         setName(name => input);
         if (input){
-            window.location.href = "/level1";
+            window.location.href = "/URECA/level1";
         }
         else{
             alert("Please enter your name")

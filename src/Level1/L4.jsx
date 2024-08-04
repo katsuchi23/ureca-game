@@ -98,14 +98,14 @@ function L41(){
                 </div>
             </div>
             <div className={style.thirdrow}>
-                <a href = '/level4'><button className= {style.button}>Home</button></a>
+                <a href = '/URECA/level4'><button className= {style.button}>Home</button></a>
                 <button onClick={check} className={style.button}>Enter</button>
             </div>
             <div className= {style.gamewin} id = "gamewin">
                 <p className= {style.score}>Winner!!</p>
                 <div className={style.secondbutton}>
-                    <a href = '/4-1'><button className= {style.button}>Retry</button></a>
-                    <a href = '/4-2'><button className={style.button}>Next</button></a>
+                    <a href = '/URECA/4-1'><button className= {style.button}>Retry</button></a>
+                    <a href = '/URECA/4-2'><button className={style.button}>Next</button></a>
             </div>
             </div>
         </div>
@@ -209,14 +209,14 @@ function L42(){
                 </div>
             </div>
             <div className={style.thirdrow}>
-                <a href = '/level4'><button className= {style.button}>Home</button></a>
+                <a href = '/URECA/level4'><button className= {style.button}>Home</button></a>
                 <button onClick={check} className={style.button}>Enter</button>
             </div>
             <div className= {style.gamewin} id = "gamewin">
                 <p className= {style.score}>Winner!!</p>
                 <div className={style.secondbutton}>
-                    <a href = '/4-2'><button className= {style.button}>Retry</button></a>
-                    <a href = '/Test4'><button className={style.button}>Next</button></a>
+                    <a href = '/URECA/4-2'><button className= {style.button}>Retry</button></a>
+                    <a href = '/URECA/Test4'><button className={style.button}>Next</button></a>
             </div>
             </div>
         </div>
@@ -356,14 +356,14 @@ function L43(){
                 </div>
             </div>
             <div className={style.thirdrow}>
-                <a href = '/level4'><button className= {style.button}>Home</button></a>
+                <a href = '/URECA/level4'><button className= {style.button}>Home</button></a>
                 <button onClick={check} className={style.button}>Enter</button>
             </div>
             <div className= {style.gamewin} id = "gamewin">
                 <p className= {style.score}>Test Finish</p>
                 <div className={style.secondbutton}>
-                    <a href = '/Test4'><button className= {style.button}>Retry</button></a>
-                    <a href = '/5-1'><button className={style.button}>Next</button></a>
+                    <a href = '/URECA/Test4'><button className= {style.button}>Retry</button></a>
+                    <a href = '/URECA/5-1'><button className={style.button}>Next</button></a>
             </div>
             </div>
         </div>
