@@ -3,6 +3,9 @@
 This project is still in development and is only the front-end part.
 The project is made using React with JavaScript (please look at the master branch).
 
+When the game starts, please turn on the music on the top left side of the screen.
+You can also play on mobile and just toggle the desktop view to get better visualization
+
 The game will consist of 6 levels with 3 stages each, which are
 1. Level 1: Introduction to fraction
 2. Level 2: Comparing unit and like fraction
@@ -23,4 +26,4 @@ On stage 3 for each level, the game will be used as a data collection where user
 Howevwe, this has not beed implemented yet.
 
 The web app can be seen through this link:
-
+https://katsuchi23.github.io/ureca-game/
