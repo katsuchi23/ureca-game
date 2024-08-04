@@ -23,4 +23,4 @@ On stage 3 for each level, the game will be used as a data collection where user
 Howevwe, this has not beed implemented yet.
 
 The web app can be seen through this link:
-
+https://katsuchi23.github.io/ureca-game/
