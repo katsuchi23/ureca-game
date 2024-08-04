@@ -17,43 +17,41 @@ import Music from './Music';
 
 function App() {
   return (
-    <>
-      <div className={style.background1}>
-        <Routes>
-          <Route exact path="/URECA/" element={<Login />} />
-          <Route exact path="/URECA/level1" element={<Level1 />} />
-          <Route exact path="/URECA/1-1" element={<L11 />} />
-          <Route exact path="/URECA/1-2" element={<L12 />} />
-          <Route exact path="/URECA/Test1" element={<L13 />} />
+    <div className={style.background1}>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/level1" element={<Level1 />} />
+        <Route path="/1-1" element={<L11 />} />
+        <Route path="/1-2" element={<L12 />} />
+        <Route path="/Test1" element={<L13 />} />
 
-          <Route exact path="/URECA/level2" element={<Level2 />} />
-          <Route exact path="/URECA/2-1" element={<L21 />} />
-          <Route exact path="/URECA/2-2" element={<L22 />} />
-          <Route exact path="/URECA/Test2" element={<L23 />} />
+        <Route path="/level2" element={<Level2 />} />
+        <Route path="/2-1" element={<L21 />} />
+        <Route path="/2-2" element={<L22 />} />
+        <Route path="/Test2" element={<L23 />} />
 
-          <Route exact path="/URECA/level3" element={<Level3 />} />
-          <Route exact path="/URECA/3-1" element={<L31 />} />
-          <Route exact path="/URECA/3-2" element={<L32 />} />
-          <Route exact path="/URECA/Test3" element={<L33 />} />
+        <Route path="/level3" element={<Level3 />} />
+        <Route path="/3-1" element={<L31 />} />
+        <Route path="/3-2" element={<L32 />} />
+        <Route path="/Test3" element={<L33 />} />
 
-          <Route exact path="/URECA/level4" element={<Level4 />} />
-          <Route exact path="/URECA/4-1" element={<L41 />} />
-          <Route exact path="/URECA/4-2" element={<L42 />} />
-          <Route exact path="/URECA/Test4" element={<L43 />} />
+        <Route path="/level4" element={<Level4 />} />
+        <Route path="/4-1" element={<L41 />} />
+        <Route path="/4-2" element={<L42 />} />
+        <Route path="/Test4" element={<L43 />} />
 
-          <Route exact path="/URECA/level5" element={<Level5 />} />
-          <Route exact path="/URECA/5-1" element={<L51 />} />
-          <Route exact path="/URECA/5-2" element={<L52 />} />
-          <Route exact path="/URECA/Test5" element={<L53 />} />
+        <Route path="/level5" element={<Level5 />} />
+        <Route path="/5-1" element={<L51 />} />
+        <Route path="/5-2" element={<L52 />} />
+        <Route path="/Test5" element={<L53 />} />
 
-          <Route exact path="/URECA/level6" element={<Level6 />} />
-          <Route exact path="/URECA/6-1" element={<L61 />} />
-          <Route exact path="/URECA/6-2" element={<L62 />} />
-          <Route exact path="/URECA/Test6" element={<L63 />} />
-        </Routes>
-        <Music />
-      </div>
-    </>
+        <Route path="/level6" element={<Level6 />} />
+        <Route path="/6-1" element={<L61 />} />
+        <Route path="/6-2" element={<L62 />} />
+        <Route path="/Test6" element={<L63 />} />
+      </Routes>
+      <Music />
+    </div>
   );
 }
 

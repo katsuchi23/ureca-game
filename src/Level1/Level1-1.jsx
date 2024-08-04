@@ -2,28 +2,20 @@ import style from './Level1.module.css';
 import { useState , useEffect, useRef } from 'react';
 import correct_sound from '../assets/correct.wav';
 import wrong_sound from '../assets/wrong.mp3';
+import { Link } from 'react-router-dom';
 
-function L11(){
-
-    function playaudio(str){
+function L11() {
+    function playaudio(str) {
         const audio = new Audio(str);
         audio.play().catch(error => {
             console.error("Error playing audio:", error);
         });
     }
 
-
     function getRandomImage() {
-        // Generate random values for b (between 2 and 12)
         const b = Math.floor(Math.random() * 11) + 2;
-    
-        // Generate a random value for a (between 1 and b-1)
         const a = Math.floor(Math.random() * (b - 1)) + 1;
-    
-        // Construct the image filename
         const imageName = `${a}-${b}.png`;
-    
-        // Assuming your images are in a public folder or imported somewhere
         const imagePath = `./src/Level1/Level1_png/${imageName}`;
         return [imagePath,a,b];
     }
@@ -33,7 +25,6 @@ function L11(){
     const [score, setScore] = useState(0);
 
     useEffect(() => {
-        // Generate the image path as soon as the component is mounted
         setScore(0);
         updateImage();
     }, []);
@@ -43,89 +34,71 @@ function L11(){
             const newImagePath = getRandomImage();
             setImagePath(newImagePath[0]);
             setN(newImagePath[1]);
-
-            const d = document.getElementById("d");
-            d.value = newImagePath[2];
         } catch (error) {
             console.error("Image not found:", error);
         }
     }
 
-    function check(){
+    function check() {
+        const numerator = document.getElementById("n").value;
 
-        const numerator = document.getElementById("n").value
-
-        if (numerator === n.toString()){
-            setScore(s => s + 1)
+        if (numerator === n.toString()) {
+            setScore(s => s + 1);
             playaudio(correct_sound);
             updateImage();
-            
-        }
-        else{
+        } else {
             playaudio(wrong_sound);
-            alert("Remember fraction is blue area / total area")
+            alert("Remember fraction is blue area / total area");
         }
 
-        if (score === 24 && numerator === n.toString()){
-            const win = document.getElementById("gamewin")
-            win.style.display = "flex";
+        if (score === 24 && numerator === n.toString()) {
+            document.getElementById("gamewin").style.display = "flex";
         }
-    }   
-    
+    }
 
-    return(
-    <>
+    return (
+        <>
         <div className={style.background1}>
-            <div className= {style.firstrow}>
-                <p className= {style.score}>Score: {score}</p>
+            <div className={style.firstrow}>
+                <p className={style.score}>Score: {score}</p>
             </div>
-            <div className= {style.secondrow}>
-                <img src={imagePath} alt="#" className= {style.image} />
+            <div className={style.secondrow}>
+                <img src={imagePath} alt="fraction" className={style.image} />
                 <p>=</p>
-                <div className= {style.fraction}>
-                    <input type="text" className= {style.input} id = "n" autocomplete="off"/>
+                <div className={style.fraction}>
+                    <input type="text" className={style.input} id="n" autoComplete="off" placeholder='?'/>
                     <hr />
-                    <input type="text" className= {style.input} id = "d" autocomplete="off"/>
+                    <input type="text" className={style.input} id="d" autoComplete="off" placeholder='?'/>
                 </div>
             </div>
             <div className={style.thirdrow}>
-                <a href = '/URECA/level1'><button className= {style.button}>Home</button></a>
+                <Link to="/level1"><button className={style.button}>Home</button></Link>
                 <button onClick={check} className={style.button}>Enter</button>
             </div>
-            <div className= {style.gamewin} id = "gamewin">
-                <p className= {style.score}>Winner!!</p>
+            <div className={style.gamewin} id="gamewin">
+                <p className={style.score}>Winner!!</p>
                 <div className={style.secondbutton}>
-                    <a href = '/URECA/1-1'><button className= {style.button}>Retry</button></a>
-                    <a href = '/URECA/1-2'><button className={style.button}>Next</button></a>
-            </div>
+                    <Link to="/1-1"><button className={style.button}>Retry</button></Link>
+                    <Link to="/1-2"><button className={style.button}>Next</button></Link>
+                </div>
             </div>
         </div>
-    </>
-    )
+        </>
+    );
 }
 
-
-function L12(){
-
-    function playaudio(str){
+function L12() {
+    function playaudio(str) {
         const audio = new Audio(str);
         audio.play().catch(error => {
             console.error("Error playing audio:", error);
         });
     }
 
-
     function getRandomImage() {
-        // Generate random values for b (between 2 and 12)
         const b = Math.floor(Math.random() * 11) + 2;
-    
-        // Generate a random value for a (between 1 and b-1)
         const a = Math.floor(Math.random() * (b - 1)) + 1;
-    
-        // Construct the image filename
         const imageName = `${a}-${b}.png`;
-    
-        // Assuming your images are in a public folder or imported somewhere
         const imagePath = `./src/Level1/Level1_png/${imageName}`;
         return [imagePath,a,b];
     }
@@ -136,7 +109,6 @@ function L12(){
     const [score, setScore] = useState(0);
 
     useEffect(() => {
-        // Generate the image path as soon as the component is mounted
         setScore(0);
         updateImage();
     }, []);
@@ -147,64 +119,58 @@ function L12(){
             setImagePath(newImagePath[0]);
             setN(newImagePath[1]);
             setD(newImagePath[2]);
-
         } catch (error) {
             console.error("Image not found:", error);
         }
     }
 
-    function check(){
-
-        const numerator = document.getElementById("n").value
+    function check() {
+        const numerator = document.getElementById("n").value;
         const denominator = document.getElementById("d").value;
 
-        if (numerator === n.toString() && denominator === d.toString()){
-            setScore(s => s + 1)
+        if (numerator === n.toString() && denominator === d.toString()) {
+            setScore(s => s + 1);
             playaudio(correct_sound);
             updateImage();
-            
-        }
-        else{
+        } else {
             playaudio(wrong_sound);
-            alert("Remember fraction is blue area / total area")
+            alert("Remember fraction is blue area / total area");
         }
 
-        if (score === 24 && numerator === n.toString() && denominator === d.toString()){
-            const win = document.getElementById("gamewin")
-            win.style.display = "flex";
+        if (score === 24 && numerator === n.toString() && denominator === d.toString()) {
+            document.getElementById("gamewin").style.display = "flex";
         }
-    }   
-    
+    }
 
-    return(
-    <>
+    return (
+        <>
         <div className={style.background1}>
-            <div className= {style.firstrow}>
-                <p className= {style.score}>Score: {score}</p>
+            <div className={style.firstrow}>
+                <p className={style.score}>Score: {score}</p>
             </div>
-            <div className= {style.secondrow}>
-                <img src={imagePath} alt="#" className= {style.image} />
+            <div className={style.secondrow}>
+                <img src={imagePath} alt="fraction" className={style.image} />
                 <p>=</p>
-                <div className= {style.fraction}>
-                    <input type="text" className= {style.input} id = "n" autocomplete="off"/>
+                <div className={style.fraction}>
+                    <input type="text" className={style.input} id="n" autoComplete="off" placeholder='?'/>
                     <hr />
-                    <input type="text" className= {style.input} id = "d" autocomplete="off"/>
+                    <input type="text" className={style.input} id="d" autoComplete="off" placeholder='?'/>
                 </div>
             </div>
             <div className={style.thirdrow}>
-                <a href = '/URECA/level1'><button className= {style.button}>Home</button></a>
+                <Link to="/level1"><button className={style.button}>Home</button></Link>
                 <button onClick={check} className={style.button}>Enter</button>
             </div>
-            <div className= {style.gamewin} id = "gamewin">
-                <p className= {style.score}>Winner!!</p>
+            <div className={style.gamewin} id="gamewin">
+                <p className={style.score}>Winner!!</p>
                 <div className={style.secondbutton}>
-                    <a href = '/URECA/1-2'><button className= {style.button}>Retry</button></a>
-                    <a href = '/URECA/Test1'><button className={style.button}>Next</button></a>
-            </div>
+                    <Link to="/1-2"><button className={style.button}>Retry</button></Link>
+                    <Link to="/Test1"><button className={style.button}>Next</button></Link>
+                </div>
             </div>
         </div>
     </>
-    )
+    );
 }
 
 function L13(){
@@ -314,36 +280,36 @@ function L13(){
         return `${minutes}:${seconds}:${milliseconds}`;
     };
 
-    return(
-    <>
+    return (
+        <>
         <div className={style.background1}>
-            <p className= {style.time}>{formatTime()}</p>
-            <div className= {style.firstrow}>
-                <p className= {style.score}>Score: {score}</p>
+            <p className={style.time}>{formatTime()}</p>
+            <div className={style.firstrow}>
+                <p className={style.score}>Score: {score}</p>
             </div>
-            <div className= {style.secondrow}>
-                <img src={imagePath} alt="#" className= {style.image} />
+            <div className={style.secondrow}>
+                <img src={imagePath} alt="fraction" className={style.image} />
                 <p>=</p>
-                <div className= {style.fraction}>
-                    <input type="text" className= {style.input} id = "n" autocomplete="off"/>
+                <div className={style.fraction}>
+                    <input type="text" className={style.input} id="n" autoComplete="off"  placeholder='?'/>
                     <hr />
-                    <input type="text" className= {style.input} id = "d" autocomplete="off"/>
+                    <input type="text" className={style.input} id="d" autoComplete="off"  placeholder='?'/>
                 </div>
             </div>
             <div className={style.thirdrow}>
-                <a href = '/URECA/level1'><button className= {style.button}>Home</button></a>
+                <Link to="/level1"><button className={style.button}>Home</button></Link>
                 <button onClick={check} className={style.button}>Enter</button>
             </div>
-            <div className= {style.gamewin} id = "gamewin">
-                <p className= {style.score}>Test Finish</p>
+            <div className={style.gamewin} id="gamewin">
+                <p className={style.score}>Test Finish</p>
                 <div className={style.secondbutton}>
-                    <a href = '/URECA/Test1'><button className= {style.button}>Retry</button></a>
-                    <a href = '/URECA/2-1'><button className={style.button}>Next</button></a>
-            </div>
+                    <Link to="/Test1"><button className={style.button}>Retry</button></Link>
+                    <Link to="/2-1"><button className={style.button}>Next</button></Link>
+                </div>
             </div>
         </div>
-    </>
-    )
+        </>
+    );
 }
 
 export {L11, L12, L13};
