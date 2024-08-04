@@ -2,6 +2,7 @@ import style from './Level1.module.css';
 import { useState , useEffect, useRef } from 'react';
 import correct_sound from '../assets/correct.wav';
 import wrong_sound from '../assets/wrong.mp3';
+import { Link } from 'react-router-dom'; // Import Link
 
 function L31(){
 
@@ -94,45 +95,52 @@ function L31(){
     }   
     
 
-    return(
-    <>
-        <div className={style.background3}>
-            <div className= {style.firstrow}>
-                <p className= {style.score}>Score: {score}</p>
-            </div>
-            <div className= {style.secondrow}>
-                <div className= {style.fraction}>
-                    <input type="text" className= {style.input} id = "n1" autocomplete="off"/>
-                    <hr />
-                    <input type="text" className= {style.input} id = "d1" autocomplete="off"/>
+    return (
+        <>
+            <div className={style.background3}>
+                <div className={style.firstrow}>
+                    <p className={style.score}>Score: {score}</p>
                 </div>
-                <p>{sign}</p>
-                <div className= {style.fraction}>
-                    <input type="text" className= {style.input} id = "n2" autocomplete="off"/>
-                    <hr />
-                    <input type="text" className= {style.input} id = "d2" autocomplete="off"/>
+                <div className={style.secondrow}>
+                    <div className={style.fraction}>
+                        <input type="text" className={style.input} id="n1" autoComplete="off" />
+                        <hr />
+                        <input type="text" className={style.input} id="d1" autoComplete="off" />
+                    </div>
+                    <p>{sign}</p>
+                    <div className={style.fraction}>
+                        <input type="text" className={style.input} id="n2" autoComplete="off" />
+                        <hr />
+                        <input type="text" className={style.input} id="d2" autoComplete="off" />
+                    </div>
+                    <p>=</p>
+                    <div className={style.fraction}>
+                        <input type="text" className={style.input} id="n3" autoComplete="off" placeholder="?" />
+                        <hr />
+                        <input type="text" className={style.input} id="d3" autoComplete="off" />
+                    </div>
                 </div>
-                <p>=</p>
-                <div className= {style.fraction}>
-                    <input type="text" className= {style.input} id = "n3" autocomplete="off" placeholder = "?"/>
-                    <hr />
-                    <input type="text" className= {style.input} id = "d3" autocomplete="off"/>
+                <div className={style.thirdrow}>
+                    <Link to="/level3">
+                        <button className={style.button}>Home</button>
+                    </Link>
+                    <button onClick={check} className={style.button}>Enter</button>
+                </div>
+                <div className={style.gamewin} id="gamewin">
+                    <p className={style.score}>Winner!!</p>
+                    <div className={style.secondbutton}>
+                        <Link to="/3-1">
+                            <button className={style.button}>Retry</button>
+                        </Link>
+                        <Link to="A/3-2">
+                            <button className={style.button}>Next</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
-            <div className={style.thirdrow}>
-                <a href = '/URECA/level3'><button className= {style.button}>Home</button></a>
-                <button onClick={check} className={style.button}>Enter</button>
-            </div>
-            <div className= {style.gamewin} id = "gamewin">
-                <p className= {style.score}>Winner!!</p>
-                <div className={style.secondbutton}>
-                    <a href = '/URECA/3-1'><button className= {style.button}>Retry</button></a>
-                    <a href = '/URECA/3-2'><button className={style.button}>Next</button></a>
-            </div>
-            </div>
-        </div>
-    </>
-    )
+        </>
+    );
+    
 }
 
 
@@ -224,45 +232,52 @@ function L32(){
     }   
     
 
-    return(
-    <>
-        <div className={style.background3}>
-            <div className= {style.firstrow}>
-                <p className= {style.score}>Score: {score}</p>
-            </div>
-            <div className= {style.secondrow}>
-                <div className= {style.fraction}>
-                    <input type="text" className= {style.input} id = "n1" autocomplete="off"/>
-                    <hr />
-                    <input type="text" className= {style.input} id = "d1" autocomplete="off"/>
+    return (
+        <>
+            <div className={style.background3}>
+                <div className={style.firstrow}>
+                    <p className={style.score}>Score: {score}</p>
                 </div>
-                <p>{sign}</p>
-                <div className= {style.fraction}>
-                    <input type="text" className= {style.input} id = "n2" autocomplete="off"/>
-                    <hr />
-                    <input type="text" className= {style.input} id = "d2" autocomplete="off"/>
+                <div className={style.secondrow}>
+                    <div className={style.fraction}>
+                        <input type="text" className={style.input} id="n1" autoComplete="off" />
+                        <hr />
+                        <input type="text" className={style.input} id="d1" autoComplete="off" />
+                    </div>
+                    <p>{sign}</p>
+                    <div className={style.fraction}>
+                        <input type="text" className={style.input} id="n2" autoComplete="off" />
+                        <hr />
+                        <input type="text" className={style.input} id="d2" autoComplete="off" />
+                    </div>
+                    <p>=</p>
+                    <div className={style.fraction}>
+                        <input type="text" className={style.input} id="n3" autoComplete="off" placeholder="?" />
+                        <hr />
+                        <input type="text" className={style.input} id="d3" autoComplete="off" placeholder="?" />
+                    </div>
                 </div>
-                <p>=</p>
-                <div className= {style.fraction}>
-                    <input type="text" className= {style.input} id = "n3" autocomplete="off" placeholder = "?"/>
-                    <hr />
-                    <input type="text" className= {style.input} id = "d3" autocomplete="off" placeholder = "?"/>
+                <div className={style.thirdrow}>
+                    <Link to="/level3">
+                        <button className={style.button}>Home</button>
+                    </Link>
+                    <button onClick={check} className={style.button}>Enter</button>
+                </div>
+                <div className={style.gamewin} id="gamewin">
+                    <p className={style.score}>Winner!!</p>
+                    <div className={style.secondbutton}>
+                        <Link to="/3-2">
+                            <button className={style.button}>Retry</button>
+                        </Link>
+                        <Link to="/Test3">
+                            <button className={style.button}>Next</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
-            <div className={style.thirdrow}>
-                <a href = '/URECA/level3'><button className= {style.button}>Home</button></a>
-                <button onClick={check} className={style.button}>Enter</button>
-            </div>
-            <div className= {style.gamewin} id = "gamewin">
-                <p className= {style.score}>Winner!!</p>
-                <div className={style.secondbutton}>
-                    <a href = '/URECA/3-2'><button className= {style.button}>Retry</button></a>
-                    <a href = '/URECA/Test3'><button className={style.button}>Next</button></a>
-            </div>
-            </div>
-        </div>
-    </>
-    )
+        </>
+    );
+    
 }
 
 function L33(){
@@ -389,46 +404,53 @@ function L33(){
         return `${minutes}:${seconds}:${milliseconds}`;
     };
 
-    return(
-    <>
-        <div className={style.background3}>
-            <p className= {style.time}>{formatTime()}</p>
-            <div className= {style.firstrow}>
-                <p className= {style.score}>Score: {score}</p>
-            </div>
-            <div className= {style.secondrow}>
-                <div className= {style.fraction}>
-                    <input type="text" className= {style.input} id = "n1" autocomplete="off"/>
-                    <hr />
-                    <input type="text" className= {style.input} id = "d1" autocomplete="off"/>
+    return (
+        <>
+            <div className={style.background3}>
+                <p className={style.time}>{formatTime()}</p>
+                <div className={style.firstrow}>
+                    <p className={style.score}>Score: {score}</p>
                 </div>
-                <p>{sign}</p>
-                <div className= {style.fraction}>
-                    <input type="text" className= {style.input} id = "n2" autocomplete="off"/>
-                    <hr />
-                    <input type="text" className= {style.input} id = "d2" autocomplete="off"/>
+                <div className={style.secondrow}>
+                    <div className={style.fraction}>
+                        <input type="text" className={style.input} id="n1" autoComplete="off" />
+                        <hr />
+                        <input type="text" className={style.input} id="d1" autoComplete="off" />
+                    </div>
+                    <p>{sign}</p>
+                    <div className={style.fraction}>
+                        <input type="text" className={style.input} id="n2" autoComplete="off" />
+                        <hr />
+                        <input type="text" className={style.input} id="d2" autoComplete="off" />
+                    </div>
+                    <p>=</p>
+                    <div className={style.fraction}>
+                        <input type="text" className={style.input} id="n3" autoComplete="off" placeholder="?" />
+                        <hr />
+                        <input type="text" className={style.input} id="d3" autoComplete="off" placeholder="?" />
+                    </div>
                 </div>
-                <p>=</p>
-                <div className= {style.fraction}>
-                    <input type="text" className= {style.input} id = "n3" autocomplete="off" placeholder = "?"/>
-                    <hr />
-                    <input type="text" className= {style.input} id = "d3" autocomplete="off" placeholder = "?"/>
+                <div className={style.thirdrow}>
+                    <Link to="/level3">
+                        <button className={style.button}>Home</button>
+                    </Link>
+                    <button onClick={check} className={style.button}>Enter</button>
+                </div>
+                <div className={style.gamewin} id="gamewin">
+                    <p className={style.score}>Test Finish</p>
+                    <div className={style.secondbutton}>
+                        <Link to="/Test3">
+                            <button className={style.button}>Retry</button>
+                        </Link>
+                        <Link to="/4-1">
+                            <button className={style.button}>Next</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
-            <div className={style.thirdrow}>
-                <a href = '/URECA/level3'><button className= {style.button}>Home</button></a>
-                <button onClick={check} className={style.button}>Enter</button>
-            </div>
-            <div className= {style.gamewin} id = "gamewin">
-                <p className= {style.score}>Test Finish</p>
-                <div className={style.secondbutton}>
-                    <a href = '/URECA/Test3'><button className= {style.button}>Retry</button></a>
-                    <a href = '/URECA/4-1'><button className={style.button}>Next</button></a>
-            </div>
-            </div>
-        </div>
-    </>
-    )
+        </>
+    );
+    
 }
 
 export {L31, L32, L33};
