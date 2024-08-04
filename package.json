@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://katsuchi23.github.io/URECA/",
+  "homepage": "https://katsuchi23.github.io/ureca-game/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
