@@ -1,7 +1,7 @@
 # URECA
 
 This project is still in development and is only the front-end part.
-The project is made using React with JavaScript.
+The project is made using React with JavaScript (please look at the master branch).
 
 The game will consist of 6 levels with 3 stages each, which are
 1. Level 1: Introduction to fraction
