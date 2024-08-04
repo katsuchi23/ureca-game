@@ -195,6 +195,9 @@ function L11() {
             const newImagePath = getRandomImage();
             setImagePath(newImagePath[0]);
             setN(newImagePath[1]);
+
+            const denominator = document.getElementById('d');
+            denominator.value = newImagePath[2];
         } catch (error) {
             console.error("Image not found:", error);
         }

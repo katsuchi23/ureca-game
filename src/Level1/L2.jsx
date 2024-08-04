@@ -277,12 +277,14 @@ function L23(){
     const [n1, setN1] = useState();
     const [n2, setN2] = useState();
     const [score, setScore] = useState(0);
+    const [count, setCount] = useState(0);
 
     useEffect(() => {
         // Generate the image path as soon as the component is mounted
         setScore(0);
         updateImage();
         start();
+        setCount(0);
     }, []);
 
     function updateImage() {
@@ -329,7 +331,7 @@ function L23(){
             alert("Remember to equalize the denominator first")
         }
 
-        if (score === 24){
+        if (count === 24){
             const win = document.getElementById("gamewin")
             win.style.display = "flex";
         }
